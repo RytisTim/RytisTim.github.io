@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rytis — Visual Designer · Product Imagery, Character Design, Ad Creative</title>
+<meta name="description" content="Brand imagery that stays consistent: product visuals for online stores, character design with reference sheets, illustrated social content, and ad creative.">
+<style>
+:root{
+  --ink:#1f1d26; --ink-soft:#55505f; --muted:#8d8899;
+  --paper:#faf8f4; --card:#fff; --line:#e6e1d8; --accent:#c8613f;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:400 17px/1.65 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  overflow-x:hidden;
+}
+img,video{max-width:100%;display:block}
+a{color:var(--accent)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font:600 12px/1 ui-sans-serif,-apple-system,"Helvetica Neue",sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+}
+
+/* hero */
+header{padding:88px 0 56px;border-bottom:1px solid var(--line)}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.08;margin:.5rem 0 .6rem;letter-spacing:-.02em;font-weight:400}
+.lede{font-size:clamp(18px,2.4vw,22px);color:var(--ink-soft);max-width:60ch;margin:0}
+.facts{
+  display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:30px;
+  font:500 14px/1.4 ui-sans-serif,-apple-system,sans-serif;color:var(--muted)
+}
+.facts b{color:var(--ink);font-weight:600}
+
+/* sections */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(25px,3.4vw,34px);line-height:1.2;margin:.5rem 0 .5rem;font-weight:400;letter-spacing:-.01em}
+.sub{color:var(--ink-soft);max-width:64ch;margin:0 0 34px}
+
+/* grids */
+.grid{display:grid;gap:18px}
+.g-wide{grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
+.g-tall{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+figure img{width:100%;height:auto}
+figcaption{
+  font:500 13px/1.45 ui-sans-serif,-apple-system,sans-serif;
+  color:var(--muted);padding:10px 13px 12px
+}
+.feature figure:first-child{grid-column:1/-1}
+/* uniform crops so rows don't end ragged — only where cropping is safe (photography,
+   not reference sheets, where a crop would cut off poses) */
+.g-crop figure:not(:first-child) img{aspect-ratio:4/3;object-fit:cover}
+.g-crop figure:first-child img{aspect-ratio:16/9;object-fit:cover}
+.g-crop figure{display:flex;flex-direction:column}
+.g-crop figcaption{margin-top:auto}
+
+/* horizontal story scroller */
+.scroller{
+  display:flex;gap:14px;overflow-x:auto;padding-bottom:14px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch
+}
+.scroller figure{flex:0 0 clamp(210px,42vw,270px);scroll-snap-align:start}
+.story+.story{margin-top:30px}
+.story h3{
+  font:600 13px/1 ui-sans-serif,-apple-system,sans-serif;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 12px
+}
+
+/* video */
+.vids{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.vids video{width:100%;border:1px solid var(--line);border-radius:3px;background:#111}
+.vcap{font:500 13px/1.45 ui-sans-serif,-apple-system,sans-serif;color:var(--muted);margin:10px 0 0}
+/* 9:16 clips would tower beside a 16:9 reel in the same row — cap and centre them */
+.vids video.vert{max-height:540px;width:auto;max-width:100%;margin:0 auto}
+.note{
+  font:500 13px/1.5 ui-sans-serif,-apple-system,sans-serif;color:var(--muted);
+  border-left:2px solid var(--line);padding-left:14px;margin-top:26px;max-width:62ch
+}
+
+/* footer */
+footer{padding:64px 0 84px}
+.cta{font-size:clamp(21px,3vw,28px);margin:0 0 12px;font-weight:400}
+.contact{font:500 15px/1.9 ui-sans-serif,-apple-system,sans-serif;color:var(--ink-soft)}
+@media (max-width:600px){
+  header{padding:56px 0 40px} section{padding:52px 0}
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">Visual designer · available for work</p>
+  <h1>Brand imagery that stays consistent.</h1>
+  <p class="lede">Anyone can make one good image. Making twelve that belong to the same
+  brand — same light, same palette, the same character in every frame — is the hard part.
+  That's the part I do.</p>
+  <div class="facts">
+    <span><b>Product &amp; e-commerce visuals</b></span>
+    <span><b>Character design</b> &amp; reference sheets</span>
+    <span><b>Illustrated social content</b></span>
+    <span><b>Ad creative</b></span>
+  </div>
+</header>
+
+<section>
+  <p class="eyebrow">Client work</p>
+  <h2>Product &amp; e-commerce visuals</h2>
+  <p class="sub">Three complete website visual sets for a European supplement manufacturer —
+  formulation, contract manufacturing and private label. Every image shares one lighting
+  setup, one colour temperature and one surface language, so the whole site reads as one
+  brand rather than a stock-photo patchwork.</p>
+
+  <div class="grid g-wide feature g-crop">
+    <figure>
+      <img src="assets/product-product-lineup-hero.jpg" alt="Four glass bottles of amber and rose liquid on brushed steel with capsule dishes" loading="lazy">
+      <figcaption>Product lineup — page hero. Negative space left deliberately for headline type.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-private-label-categories.jpg" alt="Range of supplement formats: bottles, tub, capsules, dropper, powder" loading="lazy">
+      <figcaption>Category range — one frame covering five product formats.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-manufacturing-product-range.jpg" alt="Bottles, dropper, spray and jar with capsules and tablets on steel" loading="lazy">
+      <figcaption>Product range, in-context.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-formulation-bench-hero.jpg" alt="Gloved hand over glass bottles and ingredient dishes at a formulation bench" loading="lazy">
+      <figcaption>Formulation bench — service page hero.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-manufacturing-ip-section.jpg" alt="Single bottle beside a closed notebook and pen on brushed steel" loading="lazy">
+      <figcaption>Quiet section image, built to sit under body copy.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-private-label-process.jpg" alt="Stacked white cartons beside a boxed bottle in a production facility" loading="lazy">
+      <figcaption>Packaging &amp; lead-time section.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-lab-team-section.jpg" alt="Two lab-coated hands comparing a bottle and ingredient samples" loading="lazy">
+      <figcaption>Team / expertise section, faces kept out of frame.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-process-section.jpg" alt="Technician at a production line seen through glass" loading="lazy">
+      <figcaption>Facility credibility shot.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/product-faq-section.jpg" alt="Corridor through glass partitions in a clean production facility" loading="lazy">
+      <figcaption>Corridor — used behind the FAQ block.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Client work</p>
+  <h2>Character design &amp; consistency</h2>
+  <p class="sub">A five-character cast plus four reference sheets for a wellness app.
+  The point of a reference sheet is that the character survives being drawn again — same
+  face, same proportions, same line weight, in every pose, months later, by anyone on the team.</p>
+
+  <div class="grid g-wide feature">
+    <figure>
+      <img src="assets/character-action-pose-sheet-12.jpg" alt="Twelve labelled action poses of a lotus mascot in one grid" loading="lazy">
+      <figcaption>Action &amp; reaction sheet — 12 labelled poses, one locked design.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/character-expression-sheet.jpg" alt="Twelve labelled facial expressions of a lotus mascot" loading="lazy">
+      <figcaption>Expression sheet — 12 states, from happy to overloaded.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/character-interaction-sheet.jpg" alt="Five panels of a mascot interacting with a human character" loading="lazy">
+      <figcaption>Interaction sheet — how the mascot behaves beside a human.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/character-storyboard-sheet.jpg" alt="Four four-panel mini storyboards" loading="lazy">
+      <figcaption>Mini storyboards — the character carrying a beat.</figcaption>
+    </figure>
+  </div>
+
+  <div class="grid g-tall" style="margin-top:18px">
+    <figure><img src="assets/character-character-maya.jpg" alt="Illustrated character: woman in scrubs" loading="lazy"><figcaption>Maya</figcaption></figure>
+    <figure><img src="assets/character-character-riley.jpg" alt="Illustrated character: person in an apron" loading="lazy"><figcaption>Riley</figcaption></figure>
+    <figure><img src="assets/character-character-sam.jpg" alt="Illustrated character: woman in a kitchen" loading="lazy"><figcaption>Sam</figcaption></figure>
+    <figure><img src="assets/character-character-joy.jpg" alt="Illustrated character: woman driving" loading="lazy"><figcaption>Joy</figcaption></figure>
+    <figure><img src="assets/character-character-ben.jpg" alt="Illustrated character: man on a sofa" loading="lazy"><figcaption>Ben</figcaption></figure>
+  </div>
+  <p class="note">One cast, one house style, five people who still read as individuals.
+  Consistency across a set is the whole job.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Client work</p>
+  <h2>Illustrated story carousels</h2>
+  <p class="sub">Tips carousels get scrolled past; a story doesn't. 30 story pages and 17
+  carousel pages for the same wellness app — a recurring character, a hook on slide one,
+  a payoff on the last, and the brand inside the scene instead of stamped on top of it.
+  Scroll each story sideways.</p>
+
+  <div class="story">
+    <h3>After a 12-hour shift · 5 slides</h3>
+    <div class="scroller">
+      <figure><img src="assets/carousel-maya-after-12h-slide-01.jpg" alt="Comic page: arriving home exhausted" loading="lazy"><figcaption>1 — the hook</figcaption></figure>
+      <figure><img src="assets/carousel-maya-after-12h-slide-02.jpg" alt="Comic page: still in scrubs" loading="lazy"><figcaption>2</figcaption></figure>
+      <figure><img src="assets/carousel-maya-after-12h-slide-03.jpg" alt="Comic page: not knowing what she needs" loading="lazy"><figcaption>3</figcaption></figure>
+      <figure><img src="assets/carousel-maya-after-12h-slide-04.jpg" alt="Comic page: one breath" loading="lazy"><figcaption>4 — the turn</figcaption></figure>
+      <figure><img src="assets/carousel-maya-after-12h-slide-05.jpg" alt="Comic page: calm on the sofa" loading="lazy"><figcaption>5 — the payoff</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="story">
+    <h3>Two minutes · 3 slides</h3>
+    <div class="scroller">
+      <figure><img src="assets/carousel-riley-two-minutes-slide-01.jpg" alt="Comic page: kitchen, tea" loading="lazy"><figcaption>1</figcaption></figure>
+      <figure><img src="assets/carousel-riley-two-minutes-slide-02.jpg" alt="Comic page: phone face-down" loading="lazy"><figcaption>2</figcaption></figure>
+      <figure><img src="assets/carousel-riley-two-minutes-slide-03.jpg" alt="Comic page: just the tea" loading="lazy"><figcaption>3</figcaption></figure>
+    </div>
+  </div>
+
+  <div class="story">
+    <h3>Five minutes outside · 3 slides</h3>
+    <div class="scroller">
+      <figure><img src="assets/carousel-maya-5-min-outside-slide-01.jpg" alt="Comic page: Saturday afternoon indoors" loading="lazy"><figcaption>1</figcaption></figure>
+      <figure><img src="assets/carousel-maya-5-min-outside-slide-02.jpg" alt="Comic page: sun's still up" loading="lazy"><figcaption>2</figcaption></figure>
+      <figure><img src="assets/carousel-maya-5-min-outside-slide-03.jpg" alt="Comic page: five minutes on the steps" loading="lazy"><figcaption>3</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="video">
+  <p class="eyebrow">Concept work</p>
+  <h2>Ad creative</h2>
+  <p class="sub">Ad sets rather than single clips: several concepts, several hooks, cut to
+  the ratios each placement actually needs. Scripted, voiced and edited end to end.</p>
+
+  <div class="vids">
+    <div>
+      <video src="assets/reel-ad-creative.mp4" controls preload="metadata" playsinline
+             poster="assets/poster-reel.jpg"></video>
+      <p class="vcap">Ad creative reel — three concepts, product spots and deliverables, 30s.</p>
+    </div>
+    <div>
+      <video class="vert" src="assets/reel-story-short.mp4" controls preload="metadata" playsinline
+             poster="assets/poster-short.jpg"></video>
+      <p class="vcap">Vertical short — illustrated, voiced, word-level captions.</p>
+    </div>
+  </div>
+  <p class="note">Spots for invented brands, made to show the pipeline end to end:
+  concept and script, stills, motion, voice, captions and edit.</p>
+
+  <h3 style="font:400 clamp(19px,2.4vw,24px)/1.3 inherit;margin:44px 0 6px">Spokesperson spots</h3>
+  <p class="sub" style="margin-bottom:24px">Three concepts from one brief — different
+  presenter, different angle, same product. Each is scripted, voiced and lip-synced. Synthetic
+  presenters, no camera and no cast, which is why a set of three exists at all.</p>
+  <div class="vids">
+    <div>
+      <video class="vert" src="assets/ugc-1.mp4" controls preload="none" playsinline poster="assets/poster-ugc-1.jpg"></video>
+      <p class="vcap">Skincare — "I was wrong about this one."</p>
+    </div>
+    <div>
+      <video class="vert" src="assets/ugc-2.mp4" controls preload="none" playsinline poster="assets/poster-ugc-2.jpg"></video>
+      <p class="vcap">Supplement — "Nobody told me this part."</p>
+    </div>
+    <div>
+      <video class="vert" src="assets/ugc-3.mp4" controls preload="none" playsinline poster="assets/poster-ugc-3.jpg"></video>
+      <p class="vcap">Sleep — "I almost returned it."</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="eyebrow">Work with me</p>
+  <p class="cta">Tell me what you're building.</p>
+  <p class="contact">
+    Available for product visuals, character design, social content and ad creative.<br>
+    Hire me on Fiverr — <a href="#" id="fiverr">profile link</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>
