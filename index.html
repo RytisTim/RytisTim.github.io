@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rytis — Visual Designer · Product Imagery, Character Design, Ad Creative</title>
-<meta name="description" content="Brand imagery that stays consistent: product visuals for online stores, character design with reference sheets, illustrated social content, and ad creative.">
+<meta name="description" content="Brand imagery that stays consistent: product visuals for online stores, character design with reference sheets, matching team headshots, illustrated social content, and ad creative.">
 <style>
 :root{
   --ink:#1f1d26; --ink-soft:#55505f; --muted:#8d8899;
@@ -45,6 +45,10 @@ h2{font-size:clamp(25px,3.4vw,34px);line-height:1.2;margin:.5rem 0 .5rem;font-we
 .grid{display:grid;gap:18px;align-items:start}
 .g-wide{grid-template-columns:repeat(auto-fit,minmax(330px,1fr))}
 .g-tall{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+/* a fixed six-up: auto-fit would land 5+1 and orphan the last portrait */
+.g-six{grid-template-columns:repeat(6,1fr)}
+@media (max-width:860px){.g-six{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:460px){.g-six{grid-template-columns:repeat(2,1fr)}}
 figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:hidden}
 figure img{width:100%;height:auto}
 figcaption{
@@ -103,6 +107,7 @@ footer{padding:64px 0 84px}
   <div class="facts">
     <span><b>Product &amp; e-commerce visuals</b></span>
     <span><b>Character design</b> &amp; reference sheets</span>
+    <span><b>Team headshots</b></span>
     <span><b>Illustrated social content</b></span>
     <span><b>Ad creative</b></span>
   </div>
@@ -157,6 +162,70 @@ footer{padding:64px 0 84px}
 </section>
 
 <section>
+  <p class="eyebrow">Concept work</p>
+  <h2>Product design, from object to campaign</h2>
+  <p class="sub">Most product shoots start with a product. These started with nothing — the
+  object is designed first, locked as a single master reference, and every later frame is
+  built around that lock. It matters because the usual failure of AI product work is drift:
+  eight beautiful images of eight subtly different bottles. Lock the object once and the
+  macro, the range shot and the flat lay are all provably the same thing.</p>
+
+  <div class="grid g-wide feature g-crop">
+    <figure>
+      <img src="assets/void-hero-packshot.jpg" alt="White ceramic vape device on a crystal pedestal in a bright quartz cave" loading="lazy">
+      <figcaption>VOID — hero packshot. Satin ceramic, brushed aluminium, crystal micro-texture.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/void-macro-texture.jpg" alt="Extreme macro of a faceted texture pressed into white ceramic" loading="lazy">
+      <figcaption>Macro on the surface treatment — the detail that carries the whole identity.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/void-the-range.jpg" alt="Three identical vape devices in white, ice blue and lavender on a crystal shelf" loading="lazy">
+      <figcaption>Three colourways, one object. This is the shot that proves it's a product line.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/void-in-hand.jpg" alt="A hand holding the white ceramic device against pale crystal" loading="lazy">
+      <figcaption>In-hand, for scale and for the ergonomics.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/void-flat-lay.jpg" alt="Overhead view of the device on pale stone with quartz points and a dish of water" loading="lazy">
+      <figcaption>Flat lay on matte stone, real contact shadows.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/void-cave-wide.jpg" alt="Wide view of a bright crystal cave with the device small on a pedestal" loading="lazy">
+      <figcaption>The establishing frame. Same object, same light, one session.</figcaption>
+    </figure>
+  </div>
+
+  <p class="sub" style="margin-top:34px">The same method, a different temperature — a
+  luxury serum built as a museum object rather than a cosmetic.</p>
+
+  <div class="grid g-wide g-crop">
+    <figure>
+      <img src="assets/luma-hero-packshot.jpg" alt="Faceted holographic glass serum bottle with a chrome cap on a mirror surface" loading="lazy">
+      <figcaption>LUMA — hero packshot.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/luma-the-range.jpg" alt="Three identical faceted serum bottles lit against black" loading="lazy">
+      <figcaption>The range.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/luma-pipette-moment.jpg" alt="A glass pipette suspended above an open serum bottle with a drop about to fall" loading="lazy">
+      <figcaption>The campaign moment — used twice in the set, never more.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/luma-in-hand.jpg" alt="A hand holding the faceted serum bottle" loading="lazy">
+      <figcaption>In-hand.</figcaption>
+    </figure>
+  </div>
+
+  <p class="note">VOID and LUMA are invented brands, designed and shot for this portfolio.
+  No client commissioned either one. The method is the deliverable: on a real job the object
+  is the client's, and the same lock keeps it identical across every frame they order —
+  including the ones they order six months later.</p>
+</section>
+
+<section>
   <p class="eyebrow">Client work</p>
   <h2>Character design &amp; consistency</h2>
   <p class="sub">A five-character cast plus four reference sheets for a wellness app.
@@ -191,6 +260,49 @@ footer{padding:64px 0 84px}
   </div>
   <p class="note">One cast, one house style, five people who still read as individuals.
   Consistency across a set is the whole job.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Concept work</p>
+  <h2>Team headshots that match</h2>
+  <p class="sub">A company About page usually collects six photos taken in six different
+  places — one from a wedding, one cropped out of a group shot, one lit by a ceiling bulb.
+  It reads as six freelancers rather than one company. This is the same six people rebuilt
+  into a single set: one background, one lighting direction, one crop height. Everyone sent
+  an ordinary photo; nobody left their desk.</p>
+
+  <div class="grid g-six">
+    <figure><img src="assets/team-person-01.jpg" alt="Corporate headshot of a woman against a grey studio background" loading="lazy"></figure>
+    <figure><img src="assets/team-person-02.jpg" alt="Corporate headshot of a man against a grey studio background" loading="lazy"></figure>
+    <figure><img src="assets/team-person-03.jpg" alt="Corporate headshot of a woman with glasses against a grey studio background" loading="lazy"></figure>
+    <figure><img src="assets/team-person-04.jpg" alt="Corporate headshot of a man against a grey studio background" loading="lazy"></figure>
+    <figure><img src="assets/team-person-05.jpg" alt="Corporate headshot of a woman with curly hair against a grey studio background" loading="lazy"></figure>
+    <figure><img src="assets/team-person-06.jpg" alt="Corporate headshot of an older man against a grey studio background" loading="lazy"></figure>
+  </div>
+
+  <div class="grid g-wide" style="margin-top:18px">
+    <figure>
+      <img src="assets/team-before-after.jpg" alt="Four casual phone photos above the four finished portraits made from them" loading="lazy">
+      <figcaption>What people send, and what goes on the site.</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/team-about-page.jpg" alt="The finished portraits laid out in a company About page" loading="lazy">
+      <figcaption>The set in place. Add a hire next year and they still match.</figcaption>
+    </figure>
+  </div>
+
+  <div class="grid" style="margin-top:18px">
+    <figure>
+      <img src="assets/team-one-person-set.jpg" alt="One casual phone selfie beside four professional business portraits generated from it" loading="lazy">
+      <figcaption>One phone selfie on the left, four settings built from it. Same suit, same
+      light, same lens across all four — and the same face he walked in with.</figcaption>
+    </figure>
+  </div>
+
+  <p class="note">The six-person set is made of invented people, generated for this
+  portfolio. The single before/after above is a real person, used with his permission. On a
+  real job the photos belong to the client's own team, are used with each person's consent,
+  and are deleted on delivery.</p>
 </section>
 
 <section>
@@ -321,26 +433,6 @@ footer{padding:64px 0 84px}
     </figure>
   </div>
 
-  <div class="story">
-    <h3>Hook variants &mdash; same video, three different openings</h3>
-    <p class="sub" style="margin-bottom:20px">Most ad creative fails because there was only
-    ever one version of it. These share an identical body and differ only in the first line,
-    which is the part that decides whether anyone watches the rest.</p>
-    <div class="vids">
-      <div>
-        <video class="vert" src="assets/hook-1.mp4" controls preload="none" playsinline poster="assets/poster-hook-1.jpg"></video>
-        <p class="vcap">A &mdash; "Okay, I was wrong about this one."</p>
-      </div>
-      <div>
-        <video class="vert" src="assets/hook-2.mp4" controls preload="none" playsinline poster="assets/poster-hook-2.jpg"></video>
-        <p class="vcap">B &mdash; "I almost didn't finish the bottle."</p>
-      </div>
-      <div>
-        <video class="vert" src="assets/hook-3.mp4" controls preload="none" playsinline poster="assets/poster-hook-3.jpg"></video>
-        <p class="vcap">C &mdash; "Nobody warned me about week two."</p>
-      </div>
-    </div>
-  </div>
 </section>
 
 <footer>
